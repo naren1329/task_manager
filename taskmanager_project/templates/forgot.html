@@ -1,0 +1,27 @@
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reg_log.css'%}">
+    <link rel="stylesheet" href="{% static 'css/reg_log_js.js'%}">
+
+</head>
+<style>
+  .form{
+    margin-top: 8%;
+  }
+</style>
+<body style="background:linear-gradient(to left,rgb(37, 201, 223),white)">
+<div class="body">
+    <div class="form">
+      <form class="login-form" method="post">
+        {% csrf_token %}
+        <h1>Forgot password</h1>
+        <input type="email" placeholder="email address" name="f_email" required/>
+        <input type="password" placeholder="new password" name="n_password" required/>
+        <input type="password" placeholder="confirm password" name="c_password" required/>
+        <button>Change password</button>
+      </form>
+    </div>
+  </div>
+</body>  
+</html>  

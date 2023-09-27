@@ -1,0 +1,23 @@
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reg_log.css'%}">
+    <link rel="stylesheet" href="{% static 'css/reg_log_js.js'%}">
+
+</head>
+<body style="background:linear-gradient(to left,rgb(37, 201, 223),white)">
+<div class="login-page">
+    <div class="form">
+      <form class="login-form" method="post">
+        {% csrf_token %}
+        <h1>Register</h1>
+        <input type="text" placeholder="name" name="name" required/>
+        <input type="text" placeholder="email address" name="email" required/>
+        <input type="password" placeholder="password" name="password" required/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="{% url "reg_log" %}">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+</body>  
+</html>  
